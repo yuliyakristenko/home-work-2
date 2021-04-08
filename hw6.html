@@ -1,0 +1,29 @@
+<!-- Добавьте после дива с id=one еще один див с текстом two и id=two
+    // На клик по id=two добавьте перед ним див с id - two_first, а див с id=two измените на two_second-->
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Classwork</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <div id="one">one</div>
+
+    <script>
+    	var firstDiv = document.querySelector('#one');
+    	console.log(firstDiv);
+    	var secondDiv = firstDiv.insertAdjacentHTML('afterEnd','<div id = "two" onclick="addingDiv()">two</div>');
+    	
+
+    	function addingDiv () {
+    		var twoFirstDiv = firstDiv.insertAdjacentHTML('afterEnd','<div id="two_first">two_first</div>');    		
+    		//secondDiv.setAttribute('id','two_second');
+    		//return twoFirstDiv;
+    	};
+    	console.log(secondDiv.outerHTML);
+    </script>
+</body>
+</html>
